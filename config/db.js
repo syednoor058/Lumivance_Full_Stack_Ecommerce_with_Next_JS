@@ -18,8 +18,10 @@ async function dbConnect() {
         return mongoose;
     });
   }
-    
+  
+  console.log("Connecting to database...");
   cached.conn = await cached.promise;
+  console.log("Connected to database.");
   return cached.conn;
 }
 
