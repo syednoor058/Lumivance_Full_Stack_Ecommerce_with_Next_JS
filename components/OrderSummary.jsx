@@ -37,7 +37,36 @@ const OrderSummary = () => {
   };
 
   const createOrder = async () => {
+    try {
+      if (!selectedAddress) {
+        toast.error("Please select an address");
+        return;
+      }
 
+      let cartItemsArray = Object.keys(cartItems).map(key => ({ product: key, quantity: cartItems[key] }));
+      cartItemsArray = cartItemsArray.filter(item => item.quantity > 0);
+
+      if (cartItemsArray.length === 0) {
+        toast.error("Your cart is empty!");
+        return;
+      }
+
+      const token = await getToken();
+      const {data} = await axios.post("/api/order/add", {
+        address: selectedAddress._id,
+        items: cartItemsArray
+      }, { headers: {Authorization: `Bearer ${token}`} });
+
+      if (data.success) {
+        toast.success(data.message);
+        setCartItems({});
+        router.push("/order-placed");
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
   }
 
   useEffect(() => {
@@ -124,12 +153,12 @@ const OrderSummary = () => {
             <p className="font-medium text-gray-800">Free</p>
           </div>
           <div className="flex justify-between">
-            <p className="text-gray-600">Tax (2%)</p>
-            <p className="font-medium text-gray-800">{currency}{Math.floor(getCartAmount() * 0.02)}</p>
+            <p className="text-gray-600">Tax (12%)</p>
+            <p className="font-medium text-gray-800">{currency}{Math.floor(getCartAmount() * 0.12)}</p>
           </div>
           <div className="flex justify-between text-lg md:text-xl font-medium border-t pt-3">
             <p>Total</p>
-            <p>{currency}{getCartAmount() + Math.floor(getCartAmount() * 0.02)}</p>
+            <p>{currency}{getCartAmount() + Math.floor(getCartAmount() * 0.12)}</p>
           </div>
         </div>
       </div>

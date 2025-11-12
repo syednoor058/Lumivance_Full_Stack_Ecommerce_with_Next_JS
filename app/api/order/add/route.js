@@ -20,9 +20,9 @@ export async function POST(request) {
     }
 
     //Calculated amount
-    const amount = items.reduce(async (total, item) => {
+    const amount = await items.reduce(async (acc, item) => {
       const product = await Product.findById(item.product);
-      return total + product.offerPrice * item.quantity;
+      return await acc + product.offerPrice * item.quantity;
     }, 0);
 
     await inngest.send({
