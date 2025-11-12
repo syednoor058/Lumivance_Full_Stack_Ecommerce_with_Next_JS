@@ -11,6 +11,7 @@ const HeaderSlider = () => {
       buttonText1: "Buy now",
       buttonText2: "Find more",
       imgSrc: assets.header_headphone_image,
+      color: "bg-pink-100",
     },
     {
       id: 2,
@@ -19,6 +20,7 @@ const HeaderSlider = () => {
       buttonText1: "Shop Now",
       buttonText2: "Explore Deals",
       imgSrc: assets.header_playstation_image,
+      color: "bg-blue-100",
     },
     {
       id: 3,
@@ -27,6 +29,7 @@ const HeaderSlider = () => {
       buttonText1: "Order Now",
       buttonText2: "Learn More",
       imgSrc: assets.header_macbook_image,
+      color: "bg-yellow-100",
     },
   ];
 
@@ -54,9 +57,9 @@ const HeaderSlider = () => {
         {sliderData.map((slide, index) => (
           <div
             key={slide.id}
-            className="flex flex-col-reverse md:flex-row items-center justify-between bg-[#E6E9F2] py-8 md:px-14 px-5 mt-6 rounded-xl min-w-full"
+            className={`flex flex-col md:flex-row items-center justify-between ${slide.color} md:px-14 px-5 mt-6 rounded-lg min-w-full`}
           >
-            <div className="md:pl-8 mt-10 md:mt-0">
+            <div className="md:pl-8 mt-5 md:mt-0 mb-10 md:mb-0">
               <p className="md:text-base text-orange-600 pb-1">{slide.offer}</p>
               <h1 className="max-w-lg md:text-[40px] md:leading-[48px] text-2xl font-semibold">
                 {slide.title}
@@ -71,9 +74,9 @@ const HeaderSlider = () => {
                 </button>
               </div>
             </div>
-            <div className="flex items-center flex-1 justify-center">
+            <div className="flex items-end flex-1 justify-center">
               <Image
-                className="md:w-72 w-48"
+                className="w-full md:w-96"
                 src={slide.imgSrc}
                 alt={`Slide ${index + 1}`}
               />
