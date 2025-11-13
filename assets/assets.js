@@ -1,12 +1,16 @@
 import logo from "./logo.svg";
 import search_icon from "./search_icon.svg";
-import user_icon from "./user_icon.svg";
+import user_icon from "./user_icon.png";
 import cart_icon from "./cart_icon.svg";
 import add_icon from "./add_icon.svg";
+import mail_white_icon from "./mail_white_icon.png";
+import phone_white_icon from "./phone_white_icon.png"
+import mail_black_icon from "./mail_black_icon.png";
+import phone_black_icon from "./phone_black_icon.png";
 import order_icon from "./order_icon.svg";
-import instagram_icon from "./instagram_icon.svg";
-import facebook_icon from "./facebook_icon.svg";
-import twitter_icon from "./twitter_icon.svg";
+import instagram_icon from "./instagram_icon.png";
+import facebook_icon from "./facebook_icon.png";
+import twitter_icon from "./twitter_icon.png";
 import box_icon from "./box_icon.svg";
 import product_list_icon from "./product_list_icon.svg";
 import menu_icon from "./menu_icon.svg";
@@ -40,7 +44,39 @@ import md_controller_image from "./md_controller_image.png";
 import sm_controller_image from "./sm_controller_image.png";
 import jbl_soundbox_image from "./jbl_soundbox_image.png";
 import boy_with_laptop_image from "./boy_with_laptop_image.png";
+import sunglass_model from "./sunglass-model.jpg";
+import dress_model from "./dress_model.jpg";
+import headphone_model from "./headphone_model.jpg";
+import watch_model from "./watch_model.jpg";
+import bag_cat from "./bag_cat.png";
+import watch_cat from "./watch_cat.png";
+import headphone_cat from "./headphone_cat.png";
+import smartphone_cat from "./smartphone_cat.png";
+import laptop_cat from "./laptop_cat.png";
+import water_bottle_cat from "./water_bottle_cat.png";
+import all_products_banner from "./all_products_banner.jpg";
+import logo_white from "./logo_white.png";
 import checkmark from "./checkmark.png";
+import asus from "./asus_logo.png";
+import hp from "./hp_logo.png";
+import apple from "./apple_logo.png";
+import pringles from "./pringles_logo.png";
+import luis_vuitton from "./luisvuitton_logo.png";
+import gucci from "./gucci_logo.png";
+import chanel from "./chanel_logo.png";
+import beats from "./beats_logo.png";
+import adidas from "./adidas_logo.png";
+import puma from "./puma_logo.png";
+import msi from "./msi.png";
+import dell from "./dell.png";
+import nike from "./nike.png";
+import cocacola from "./cocacola.png";
+import invictus from "./invictus.png";
+import dior from "./dior.png";
+import armani from "./armani.png";
+import mi from "./mi.png";
+import samsung from "./samsung.png";
+import raymond from "./raymond.png";
 import product_details_page_apple_earphone_image1 from "./product_details_page_apple_earphone_image1.png";
 import product_details_page_apple_earphone_image2 from "./product_details_page_apple_earphone_image2.png";
 import product_details_page_apple_earphone_image3 from "./product_details_page_apple_earphone_image3.png";
@@ -54,6 +90,10 @@ export const assets = {
   cart_icon,
   add_icon,
   order_icon,
+  mail_white_icon,
+  phone_white_icon,
+  mail_black_icon,
+  phone_black_icon,
   instagram_icon,
   facebook_icon,
   twitter_icon,
@@ -90,6 +130,38 @@ export const assets = {
   sm_controller_image,
   jbl_soundbox_image,
   boy_with_laptop_image,
+  sunglass_model,
+  dress_model,
+  headphone_model,
+  watch_model,
+  bag_cat,
+  watch_cat,
+  headphone_cat,
+  smartphone_cat,
+  laptop_cat,
+  water_bottle_cat,
+  all_products_banner,
+  logo_white,
+  asus,
+  hp,
+  apple,
+  luis_vuitton,
+  adidas,
+  puma,
+  pringles,
+  gucci,
+  chanel,
+  beats,
+  msi,
+  dell,
+  samsung,
+  mi,
+  invictus,
+  dior,
+  armani,
+  nike,
+  raymond,
+  cocacola,
   product_details_page_apple_earphone_image1,
   product_details_page_apple_earphone_image2,
   product_details_page_apple_earphone_image3,

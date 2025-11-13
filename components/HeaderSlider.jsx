@@ -60,12 +60,12 @@ const HeaderSlider = () => {
             className={`flex flex-col md:flex-row items-center justify-between ${slide.color} md:px-14 px-5 mt-6 rounded-lg min-w-full`}
           >
             <div className="md:pl-8 mt-5 md:mt-0 mb-10 md:mb-0">
-              <p className="md:text-base text-orange-600 pb-1">{slide.offer}</p>
+              <p className="md:text-base text-[#f85606] pb-1">{slide.offer}</p>
               <h1 className="max-w-lg md:text-[40px] md:leading-[48px] text-2xl font-semibold">
                 {slide.title}
               </h1>
               <div className="flex items-center mt-4 md:mt-6 ">
-                <button className="md:px-10 px-7 md:py-2.5 py-2 bg-orange-600 rounded-full text-white font-medium">
+                <button className="md:px-10 px-7 md:py-2.5 py-2 bg-[#f85606] rounded-full text-white font-medium">
                   {slide.buttonText1}
                 </button>
                 <button className="group flex items-center gap-2 px-6 py-2.5 font-medium">
@@ -91,7 +91,7 @@ const HeaderSlider = () => {
             key={index}
             onClick={() => handleSlideChange(index)}
             className={`h-2 w-2 rounded-full cursor-pointer ${
-              currentSlide === index ? "bg-orange-600" : "bg-gray-500/30"
+              currentSlide === index ? "bg-[#f85606]" : "bg-gray-500/30"
             }`}
           ></div>
         ))}
