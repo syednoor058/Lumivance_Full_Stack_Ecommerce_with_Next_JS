@@ -21,8 +21,10 @@ export const AppContextProvider = (props) => {
   const [userData, setUserData] = useState(false);
   const [isSeller, setIsSeller] = useState(false);
   const [cartItems, setCartItems] = useState({});
+  const [loading, setLoading] = useState(true);
 
   const fetchProductData = async () => {
+    setLoading(true);
     try {
       const {data} = await axios.get("/api/product/list");
       if (data.success) {
@@ -32,10 +34,13 @@ export const AppContextProvider = (props) => {
       }
     } catch (error) {
       toast.error(error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
   const fetchUserData = async () => {
+    setLoading(true);
     try {
       if (user.publicMetadata.role === "seller") {
         setIsSeller(true);
@@ -52,6 +57,8 @@ export const AppContextProvider = (props) => {
       }
     } catch (error) {
       toast.error(error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -143,6 +150,7 @@ export const AppContextProvider = (props) => {
     updateCartQuantity,
     getCartCount,
     getCartAmount,
+    loading,
   };
 
   return (

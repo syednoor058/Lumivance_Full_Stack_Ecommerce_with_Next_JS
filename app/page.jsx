@@ -10,8 +10,22 @@ import Footer from "@/components/Footer";
 import Features from "@/components/Features";
 import TopCategory from "@/components/TopCategory";
 import { LogoMarquee } from "@/components/LogoMarquee";
+import { useAppContext } from "@/context/AppContext";
+
+
 
 const Home = () => {
+
+  const {loading} = useAppContext();
+
+  if (loading) {
+    return (
+      <div className="w-full h-screen flex items-center justify-center bg-white">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-[#f85606] border-solid"></div>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-[#f5f5f5]">
       <Navbar />
